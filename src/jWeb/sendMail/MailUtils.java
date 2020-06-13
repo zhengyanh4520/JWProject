@@ -15,44 +15,45 @@ import javax.mail.internet.MimeMessage;
 
 public class MailUtils {
 	public static void sendMail(String TO, String emailMsg) throws AddressException, MessagingException{
-		//´´½¨Properties¶ÔÏó£¬ÉèÖÃÓÊ¼ş·şÎñÆ÷»ù±¾ĞÅÏ¢
+		//åˆ›å»ºPropertieså¯¹è±¡ï¼Œè®¾ç½®é‚®ä»¶æœåŠ¡å™¨åŸºæœ¬ä¿¡æ¯
 		Properties props=new Properties();
 		props.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
     	props.setProperty("mail.smtp.socketFactory.port", "465");
-		//ÉèÖÃ´«ÊäĞ­ÒéSMTP
+		//è®¾ç½®ä¼ è¾“åè®®SMTP
 		props.setProperty("mail.transport.protocol", "SMPT");
-		//ÉèÖÃSMTP·şÎñÆ÷
+		//è®¾ç½®SMTPæœåŠ¡å™¨
 		props.setProperty("mail.host", "smtp.qq.com");
-		//ÉèÖÃsmtpÊÇ·ñĞèÒªÓÃ»§ÑéÖ¤
+		//è®¾ç½®smtpæ˜¯å¦éœ€è¦ç”¨æˆ·éªŒè¯
 		props.setProperty("mail.smtp.auth", "true");
 		props.setProperty("mail.smtp.ssl.enable","true");
-		//ÆôÓÃµ÷ÊÔ
+		//å¯ç”¨è°ƒè¯•
 		props.setProperty("mail.debug", "true");
-		//ÉèÖÃÁ´½Ó³¬Ê±
+		//è®¾ç½®é“¾æ¥è¶…æ—¶
 		props.setProperty("mail.smtp.timeout", "1000");
-		//ÉèÖÃ¶Ë¿Ú
+		//è®¾ç½®ç«¯å£
         props.setProperty("mail.smtp.port", "465");
         props.setProperty("mail.smtp.socketFactory.fallback", "false");
         props.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 		
-		//´´½¨ÑéÖ¤Æ÷
+		//åˆ›å»ºéªŒè¯å™¨
 		Authenticator auth=new Authenticator() {
+			
 			public PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("452056395@qq.com","awdxaegwhczlcadi");
+				return new PasswordAuthentication("æ­¤å¤„å¡«å…¥é‚®ç®±","æ­¤å¤„å¡«å…¥ä¿¡æ¯ç ");
 			}
 		};
-		//ÊµÀı»¯ÓÊ¼ş»á»°session
+		//å®ä¾‹åŒ–é‚®ä»¶ä¼šè¯session
 		Session session=Session.getInstance(props, auth);
-		//´´½¨message,¼´ÄÚÈİ
+		//åˆ›å»ºmessage,å³å†…å®¹
 		Message message=new MimeMessage(session);
-		//·¢ËÍÕß
-    	message.setFrom(new InternetAddress("452056395@qq.com"));
-    	//ÉèÖÃ·¢ËÍ·½Ê½ºÍ½ÓÊÕÕß£¬½ÓÊÕÕßÔÚµ÷ÓÃsendMailÊ±Í¨¹ı²ÎÊı´«µİ
+		//å‘é€è€…
+    	message.setFrom(new InternetAddress("å¡«å…¥é‚®ç®±"));
+    	//è®¾ç½®å‘é€æ–¹å¼å’Œæ¥æ”¶è€…ï¼Œæ¥æ”¶è€…åœ¨è°ƒç”¨sendMailæ—¶é€šè¿‡å‚æ•°ä¼ é€’
     	message.setRecipient(RecipientType.TO, new InternetAddress(TO));
-    	//ÓÊ¼şÖ÷Ìâ
-    	message.setSubject("°Ù»õÉÌµê");
+    	//é‚®ä»¶ä¸»é¢˜
+    	message.setSubject("ç™¾è´§å•†åº—");
     	message.setContent(emailMsg, "text/html;charset=utf-8");
-    	//·¢ËÍ
+    	//å‘é€
     	Transport.send(message);
 	}
 }
