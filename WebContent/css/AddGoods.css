@@ -1,0 +1,145 @@
+ html{
+    width:100%;
+ 	height: 100%;
+ }
+ 
+ 
+ body { 
+ 	background-color: #c6c6c6;
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	width:100%;
+  	height:100%;
+  	background-size: cover;
+  	-webkit-background-size: cover;
+  	-o-background-size: cover;
+ }
+ 
+ .top{
+	font-size: 18px;
+    position: fixed; 
+    height: auto;
+    width:100%;
+    margin-left: 0;
+    top: 0;
+    margin-bottom: 5px;
+    background-color: #F0F0F0;
+    opacity: 0.9;
+    z-index: 999999;
+}
+.top ul{
+    width: auto;
+    list-style-type: none;
+    white-space:nowrap;
+    overflow: hidden;
+    margin-left: 130px;
+    padding: 0;
+}
+.top li {
+    float:left; 
+    margin-right:30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.top li a{
+    display: block; 
+    color:black;
+    text-align: center;
+    padding: 3px;
+    overflow: hidden;
+    text-decoration: none; 
+    
+}
+
+.top li a:hover{
+    /* 鼠标选中时变色 */
+    background-color: #ADADAD;
+    cursor:pointer;
+}
+
+
+.button1{
+    display: block; 
+    color:black;
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none; 
+    background-color: transparent;
+    font-size: 18px;
+    display: inline-block;
+    border: none;
+    padding: 3px;
+    overflow: hidden;
+}
+
+.top ul button:hover{
+    /* 鼠标选中时变色 */
+    background-color: #ADADAD;
+}
+
+.form-item { 
+	width: 500px; 
+	height: 605px; 
+	margin:0px auto;
+	margin-top: 70px;
+	padding: 30px;
+	text-align:center;
+	font-size: 18px; 
+	border-radius: 25px; 
+	opacity: 0.95;
+}
+
+
+.logo { 
+	width: 104px; 
+	height: 104px; 
+	margin: 5px auto 30px; 
+}
+
+.form-item button { 
+	width: 100px; 
+	height: 50px; 
+	border: 0; 
+	border-radius: 25px; 
+	font-size: 18px; 
+	color: #1f6f4a; 
+	outline: none; 
+	cursor: pointer; 
+	background-color: #fff; 
+	margin:5px 0px 5px 0px;
+}
+
+#gName { 
+	background: url(../images/email.png) 20px 11px no-repeat; 
+}
+
+#gDescribe { 
+	background: url(../images/email.png) 20px 11px no-repeat; 
+}
+
+#gPrice { 
+	background: url(../images/email.png) 20px 11px no-repeat; 
+}
+
+#gNumber { 
+	background: url(../images/email.png) 20px 11px no-repeat; 
+}
+
+.input1 { 
+	width: 288px; 
+	height: 40px; 
+	padding-left: 70px; 
+	border: 1px solid #fff; 
+	border-radius: 25px; 
+	font-size: 18px; 
+	background-color: transparent; 
+	outline: none;
+	margin:3px 0px 3px 0px;
+}
+
+
+
+
+
+
